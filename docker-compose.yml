@@ -87,7 +87,7 @@ services:
       dockerfile: services/Discount/Discount.API/Dockerfile
     environment:
       - ASPNETCORE_URLS=http://+:8080
-      - ConnectionStrings=server=discountDb;port=5432;database=discountDb;user id=admin;password=Password123!
+      - DatabaseSettings__ConnectionString=Host=discountDb;Port=5432;Database=discountDb;Username=admin;Password=Password123!
     container_name: discount.api  
     depends_on:
      discountDb:
